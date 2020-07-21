@@ -1,0 +1,31 @@
+from tkinter import *
+root=Tk()
+root.geometry("700x700")
+def show():
+    print(f"name is:{e1.get()},age is:{int(e2.get())},your subject is:{e3.get()}")
+    obj1=open("record1.txt","a")
+    obj1.write(f"\nname is:{e1.get()},age is:{int(e2.get())},subject is:{e3.get()}")
+    obj1.close()
+    obj1=open("record1.txt","r")
+    # print(obj1.read())
+    # print(obj1.readline(12))
+    list=(obj1.readlines())
+    for data in list:
+        print(data)
+l1=Label(root,text="Enter your name:")
+l1.grid(row=0,column=0)
+e1=Entry(root)
+e1.grid(row=0,column=1)
+l2=Label(root,text="Enter your age:")
+l2.grid(row=1,column=0)
+e2=Entry(root)
+e2.grid(row=1,column=1)
+l3=Label(root,text="Enter your subject:")
+l3.grid(row=3,column=0)
+e3=Entry(root)
+e3.grid(row=3,column=1)
+b1=Button(root,text="submit",command=show)
+b1.grid(row=4,columnspan=2)
+
+
+root.mainloop()

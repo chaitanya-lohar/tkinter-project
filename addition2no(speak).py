@@ -1,0 +1,31 @@
+from tkinter import *
+# from assistent import *
+root=Tk()
+root.geometry("700x700")
+x=IntVar()    # String, Int,double,float
+def fun1(a):
+    a=e1.get()
+    b=e2.get()
+    sum=(int(a)+int(b))
+    x.set(sum)
+    # speak(f"Sum is :{sum}")
+l1=Label(root,text="enter first number:")
+l1.grid(row=0,column=0)
+e1=Entry(root)
+e1.bind("<FocusIn>")  #lambda a:speak("Enter first number")
+e1.grid(row=0,column=1)
+l2=Label(root,text="enter second number:")
+l2.grid(row=1,column=0)
+e2=Entry(root)
+e2.bind("<FocusIn>")   #,lambda a:speak("Enter Second number")
+# e2.bind("<FocusOut>",lambda a:speak("sum of two number"))
+e2.grid(row=1,column=1)
+l3=Label(root,text="Sum is:")
+l3.grid(row=2,column=0)
+e3=Entry(root,textvariable=x)
+
+e3.grid(row=2,column=1)
+b1=Button(root,font="Arial 10 bold",text="Submit",fg="white",bg="black")
+b1.grid(row=3,columnspan=2)
+b1.bind("<Button-1>",fun1)
+root.mainloop()

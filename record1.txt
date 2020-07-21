@@ -1,0 +1,7 @@
+name is:yamini,age is:21,subject is:computername is:chetan,age is:22,subject is:science
+name is:rajesh,age is:23,subject is:social
+name is:ram,age is:21,subject is:computer
+name is:ram,age is:34,subject is:com
+name is:qqqwwww,age is:1111,subject is:cccc
+name is:aaaaaa,age is:11111111,subject is:aaaaa
+name is:sssssssssssss,age is:1111111,subject is:fffffffff
